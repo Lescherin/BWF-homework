@@ -1,0 +1,239 @@
+<html>
+  <head>
+    <title>多边形判断小程序2.0版</title>
+    <meta http-equiv="content-type" content="text/html; charset=GB18030">
+    <style type="text/css">
+		<!--
+		.STYLE4 {font-size: 12}
+		.STYLE5 {margin-top : 0px; padding-bottom : 10px; margin-bottom : 0px; margin-left : 10px; margin-right : 10px; font-family : 黑体; font-weight: bold; color: #FFFFFF;}
+		.STYLE7 {font-size: 12px}
+		-->
+	</style>
+    
+  <script>
+  	function init(num){
+  	//alert(num);
+  		document.all.inputtext.innerHTML="";
+  		document.all.inputtext.innerHTML+="<p class='STYLE4'>";
+  		for(var i=0;i<num;i++)
+  		{
+  			var n="n"+(i+1);
+  			//alert(n);
+  			document.all.inputtext.innerHTML+="<font size=2px>第"+(i+1)+"条边</font>:<input type='text' id='"+n+"'/><br/>"
+  		}
+  		document.all.inputtext.innerHTML+="</p>";
+  		document.all.inputtext.innerHTML+="<div><span class='STYLE5'><img src='images/temp02.jpg' width='98' height='98' alt='' border='0' align='right'></span><br></div>";
+  		document.all.tupian.innerHTML="";
+  		if(num==3){
+  			document.all.tupian.innerHTML+="<img src='images/san.jpg' width='200' height='283'>";
+  		}else if(num==4){
+  			document.all.tupian.innerHTML+="<img src='images/si.jpg' width='200' height='283'>";
+  		}else if(num==5){
+  			document.all.tupian.innerHTML+="<img src='images/wu.jpg' width='200' height='283'>";
+  			
+  		}
+  		//document.all.inputtext.innerHTML+="<input type='button' value='提交' onclick='validate()'>"
+  		document.all.inputtext.innerHTML+="<p align='left'><br>"
+    				+"<input name='button' type='image' src='images/sub.gif' onClick='validate()'/>"
+    				+"</p>";
+  	}
+  	function validate(){
+  		var c = new Array()   
+  		
+  		var value = document.all.inputtext.getElementsByTagName("input");
+  		for(var i=1;i<value.length;i++){
+  			var n="n"+i;
+  			var v = document.getElementById(n).value;
+  			//alert(v);
+  			if(v==""){
+  				alert("边长不能为空，请输入边长：");
+  				document.getElementById(n).focus();
+  				return;
+  			}
+  			
+  			c[i-1]=v;
+  		}
+  		jusuan(c);
+  	
+  	}
+  	
+  	function JudgeTriagle(value)
+	{
+		//bug 1：判断为整数，0没有进行限制
+	     var re = /^[0-9]+[0-9]*]*$/; //判断正整数 /^[1-9]+[0-9]*]*$/   
+	     //alert("aaaaaa");
+	     if (!re.test(value))
+	     {
+	        return false;
+	     }
+	     return true;
+	}  
+	
+	function jusuan(c){
+		//alert(c[0]);
+		var type = document.all.type;
+		var value;
+		for(var i=0;i<type.length;i++){
+			if(type[i].checked){
+				value = type[i].getAttribute("value");
+			}
+		}
+		
+		//alert(max);
+		
+		if(value=="3"){
+			san(c);
+			
+		}else if(value=="4"){
+			si(c);
+		}else if(value=="5"){
+			wu(c);
+		}
+		
+		
+	
+	}
+	
+	function check(c){
+		for(var j=0;j<c.length;j++)
+		{	
+			var n="n"+(j+1);
+		    c[j]=parseInt(c[j]);
+		    //alert(c[j]);
+		    if(!JudgeTriagle(c[j])){
+  				alert("第"+(j+1)+"条边输入不正确，请输入正整数！");
+  				document.getElementById(n).value="";
+  				document.getElementById(n).focus();
+  				return false;
+  			}
+		}
+		return true;
+	}
+	//三角形
+	function san(c){
+		
+		if(check(c)){
+			if(c[0]+c[1]>c[2] && c[0]+c[2]>c[1] && c[1]+c[2]>c[0]){
+			//alert(c[0]+","+c[1]+","+c[2]);
+				if(c[0]==c[1]&& c[1]==c[2]){
+					alert("等边三角形");
+				}
+				if(c[0]==c[1]||c[0]==c[2]||c[1]==c[2]){
+					alert("等腰三角形");
+				}else{
+					alert("普通三角形");
+				}
+			}else{
+				alert("不能构成三角形");
+			}
+		}
+	
+	}
+	//四边形
+	function si(c){
+		if(check(c)){
+			if(c[0]+c[1]+c[2]>c[3] && c[0]+c[1]+c[3]>c[2] && c[0]+c[3]+c[2]>c[1] && c[3]+c[1]+c[2]>c[0])
+			{
+				if(c[0]==c[1] && c[1]==c[2] && c[2]==c[3])
+				{
+					alert("正方形");
+				}
+				if(c[0]==c[2] && c[1]==c[3])
+				{
+					alert("长方形");
+				}
+				else
+				{
+					alert("普通四边形");
+				}
+			}
+			else
+			{
+				alert("不能组成四边形");
+			}
+		}
+	}
+	//五边形
+	function wu(c){
+		if(check(c)){
+			if(c[0]+c[1]+c[2]+c[3]>c[4] && c[0]+c[1]+c[2]+c[4]>c[3] && c[0]+c[1]+c[4]+c[3]>c[2] && c[0]+c[4]+c[2]+c[3]>c[1] && c[4]+c[1]+c[2]+c[3]>c[0])
+			{
+				if(c[0]==c[1]&& c[1]==c[2] && c[2]==c[3] && c[3]==c[4])
+				{
+					alert("正五边形");
+				}
+				else
+				{
+					alert("普通五边形");
+				}
+			}
+			else
+			{
+				alert("不能组成五边形");
+			}
+		}
+	}
+  	
+  </script>
+  </head>
+  
+  <body leftmargin=0 topmargin=0 marginheight="0" marginwidth="0" background="images/bg.gif">
+<table border="0" cellspacing="0" cellpadding="0"  width="100%">
+  <tr>
+	<td width="50%"><img src="images/px1.gif" width="1" height="1" alt="" border="0"></td>
+	<td valign="bottom"><img src="images/bg_left.gif" alt="" width="17" height="16" border="0"></td>
+	<td  valign="top"> 
+      <table border="0" cellspacing="0" cellpadding="0" width="780" align="center" background="images/fon_top.gif">
+<tr>
+	<td height="80" align="left" valign="middle" images/fon_top.gif></p>	<img src="images/duobian.gif" width="220" height="60"></td>
+	</tr>
+</table>
+      <table width="780" border="0" cellspacing="0" cellpadding="0">
+        
+        <tr>
+          <td height="33" background="images/fon02.gif">
+            <table width="780" height="38" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="100%" align="left" valign="top"><a href="#"></a><img src="images/separator.gif" width="2" height="33"><a href="#"></a><img src="images/separator.gif" width="2" height="33"><a href="#"></a><img src="images/separator.gif" width="2" height="33"><a href="#"></a><img src="images/separator.gif" width="2" height="33"><a href="#"></a><img src="images/separator.gif" width="2" height="33"><span class="STYLE7">请按照顺时针方向输入零以上的整数：</span></td>
+                <td width="134">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+     
+<table width="780" border="1" align="center" cellpadding="2" cellspacing="3" bordercolor="#CCCCCC">
+<tr valign="top">
+	<td width="212" align="left"><p class="left" id="tupian">&nbsp;<img src="images/2.jpg" width="200" height="283"></p>            </td>
+	<td width="551" align="left" >
+请选择:
+  <input type="radio" name="type" onClick="init(3)" value="3"/>
+  三边形
+  <input type="radio" name="type" onClick="init(4)" value="4"/>
+  四边形
+  <input type="radio" name="type" onClick="init(5)" value="5"/>
+  五边形 </p>
+<div id="inputtext"> 
+	<div><span class='STYLE5'><img src='images/temp02.jpg' width='98' height='98' alt='' border='0' align='right'></span><br></div>
+</div><p>&nbsp;</p></td>
+	</tr>
+</table>
+<div class="px" align="center"><img src="images/bot01.jpg" width="780" height="9" alt="" border="0"></div>
+<table width="780" border="1" align="center"  cellpadding="0" cellspacing="0" bordercolor="#999999">
+<tr>
+	<td align="center" valign="top"><p>Copyright &copy; 2007     
+	  <p>
+	    
+	    </td>
+        </tr>
+</table>
+	</td>
+	<td valign="bottom" background="images/bg_right.gif" ><img src="images/bg_right.gif" alt="" width="17" height="16" border="0"></td>
+	<td width="50%" background="images/bg.gif" ><img src="images/px1.gif" width="1" height="1" alt="" border="0"></td>
+</tr>
+</table>
+
+</body>
+
+</html>
+
