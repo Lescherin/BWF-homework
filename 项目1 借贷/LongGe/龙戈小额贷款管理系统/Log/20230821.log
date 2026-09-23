@@ -1,0 +1,2 @@
+﻿时间:2023/8/21 16:38:02,DbManageFile.ReadFileFromDB.异常：列名 'siginname' 无效。, SQL语句：Select sigin From wf_taskhistory Where id=6676
+时间:2023/8/21 16:38:02,DbManageFile.ReadFileFromDB.异常：列名 'siginname' 无效。, SQL语句：Select sigin From wf_taskhistory Where id=6675

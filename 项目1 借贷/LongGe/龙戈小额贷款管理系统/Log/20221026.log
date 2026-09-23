@@ -1,0 +1,3 @@
+﻿时间:2022/10/26 11:02:31,DbManageFile.ReadFileFromDB.异常：列名 'siginname' 无效。, SQL语句：Select sigin From wf_taskhistory Where id=17164
+时间:2022/10/26 11:02:31,DbManageFile.ReadFileFromDB.异常：列名 'siginname' 无效。, SQL语句：Select sigin From wf_taskhistory Where id=17137
+时间:2022/10/26 11:02:31,DbManageFile.ReadFileFromDB.异常：列名 'siginname' 无效。, SQL语句：Select sigin From wf_taskhistory Where id=17132

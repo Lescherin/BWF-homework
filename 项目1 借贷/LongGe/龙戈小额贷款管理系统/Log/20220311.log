@@ -1,0 +1,2 @@
+﻿时间:2022/3/11 18:17:26,DbObjectSql.ExcuteSuccess.异常：无法打开登录所请求的数据库 "dbxddata_common"。登录失败。
+用户 'dbuser' 登录失败。, SQL语句：insert into tb_test(strtest) values('服务器连接测试')

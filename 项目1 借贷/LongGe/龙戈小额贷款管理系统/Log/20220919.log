@@ -1,0 +1,8 @@
+﻿时间:2022/9/19 17:08:19,DbObjectSql.ReadRowCount.异常：'=' 附近有语法错误。
+字符串 '' 后的引号不完整。, SQL语句：select count(客户编号) from  view_customer_t  where 客户类型<>'担保方' and isdelete='否'  and 建档经办公司='271期分公司' and 备份时间 is null and 客户地区 like '%' or 1==1 or%'
+时间:2022/9/19 17:08:32,DbObjectSql.ReadRowCount.异常：'=' 附近有语法错误。
+字符串 '' 后的引号不完整。, SQL语句：select count(客户编号) from  view_customer_t  where 客户类型<>'担保方' and isdelete='否'  and 建档经办公司='271期分公司' and 备份时间 is null and 客户地区 like '%' and 1==1 or%'
+时间:2022/9/19 17:09:03,DbObjectSql.ReadRowCount.异常：字符串 '' 后的引号不完整。
+'' 附近有语法错误。, SQL语句：select count(客户编号) from  view_customer_t  where 客户类型<>'担保方' and isdelete='否'  and 建档经办公司='271期分公司' and 备份时间 is null and 客户地区 like '%' and 1=1%'
+时间:2022/9/19 17:09:16,DbObjectSql.ReadRowCount.异常：字符串 '' 后的引号不完整。
+'' 附近有语法错误。, SQL语句：select count(客户编号) from  view_customer_t  where 客户类型<>'担保方' and isdelete='否'  and 建档经办公司='271期分公司' and 备份时间 is null and 客户地区 like '%' or 1=1 or%'

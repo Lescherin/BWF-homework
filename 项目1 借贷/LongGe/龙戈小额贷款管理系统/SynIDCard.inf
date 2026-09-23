@@ -1,0 +1,27 @@
+[version]
+    signature="$CHICAGO$"
+    AdvancedINF=2.0
+ [Add.Code]
+    SynIDCard.ocx=SynIDCard.ocx
+    license.dat=license.dat
+    sdtapi.dll=sdtapi.dll
+    WltRS.dll=WltRS.dll
+    Syn_IDCardRead.dll=Syn_IDCardRead.dll
+ [license.dat]
+    file-win32-x86=thiscab
+    DestDir=11
+ [sdtapi.dll]
+    file-win32-x86=thiscab
+    DestDir=11
+ [WltRS.dll]
+    file-win32-x86=thiscab
+    DestDir=11
+ [Syn_IDCardRead.dll]
+    file-win32-x86=thiscab
+    FileVersion=1,0,0,1
+    DestDir=11
+ [SynIDCard.ocx]
+    file-win32-x86=thiscab
+    clsid={E6E0A751-541A-4855-9A8D-35EB7122C950}
+    FileVersion=1,0,0,1
+    RegisterServer=yes

@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+</head>
+<body>
+<center>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="100%">
+
+<table width="100%" border="1" cellspacing="0">
+<tr>
+<td width="100%" align="center" valign="middle"><font color="#000000" size="5"><strong>业务概况</strong></font></td>
+</tr>
+</table>
+
+</td></tr>
+<tr><td width="100%">
+
+<table width="100%" border="1" cellspacing="0">
+<tr>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">业务流水</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&业务流水号&</font></td>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">业务品种</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&业务品种&</font></td>
+</tr>
+<tr>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">借 款 方</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&借款方&</font></td>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">贷 款 方</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&贷款方&</font></td>
+</tr>
+<tr>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">贷款金额</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&贷款金额&万</font></td>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">贷款期限</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&贷款期限&个月</font></td>
+</tr>
+<tr>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">起始日期</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&起始日期&</font></td>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">截止日期</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&截止日期&</font></td>
+</tr>
+<tr>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">项目经理</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">A：&项目经理A角&  B：&项目经理B角&</font></td>
+<td width="15%" align="right" valign="middle"><font color="#000000" size="3">受理日期</font></td>
+<td width="35%" align="left" valign="middle"><font color="#000000" size="3">&受理日期&</font></td>
+</tr>
+</table>
+
+</td></tr>
+
+<tr>
+<td width="100%">
+
+<table width="100%" border="1" cellspacing="0">
+<tr>
+<td width="15%" align="center" valign="middle" style="height: 31px"><font color="#000000" size="5"><strong>处理内容</strong></font></td>
+<td width="85%" align="center" valign="middle" style="height: 31px"><font color="#000000" size="5"><strong>结  论</strong></font></td>
+</tr>
+&Content1;
+</table>
+
+</td></tr>
+
+<tr><td width="100%">
+
+</td></tr>
+</table>
+</center>
+</body>
+</html>

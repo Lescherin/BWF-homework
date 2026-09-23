@@ -1,0 +1,74 @@
+﻿<html>
+<head>
+<style type="text/css">    
+html,body{margin:0;padding:0;}    
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}    
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+<body> 
+<font color='red' size=6><strong><label id='errtext'></label></strong></font>
+<div style="width:100%;height:100%;border:#ccc solid 1px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">        
+function initMap()
+{        
+createMap();       
+setMapEvent();       
+addMapControl();    
+}            
+function createMap()
+{
+try
+{        
+var map = new BMap.Map("dituContent");     
+var myGeo = new BMap.Geocoder();
+myGeo.getPoint("&地址&", function(point){
+if(point) 
+{
+map.centerAndZoom(point, 16);
+var pointMarker = new BMap.Point(point.lng, point.lat); 
+var marker = new BMap.Marker(point);
+map.addOverlay(marker);
+addInfo(marker,pointMarker); 
+}
+else
+{
+    map.centerAndZoom(new BMap.Point(121.461165,31.234095), 11);
+}
+}, "&地址&");     
+window.map = map;
+}
+catch(e)
+{
+document.getElementById("errtext").innerText="地图查看失败！请确保连接Internet网络正常！";
+}   
+}            
+function setMapEvent()
+{        
+map.enableDragging();       
+map.enableScrollWheelZoom();   
+map.enableDoubleClickZoom();       
+map.enableKeyboard();  
+}            
+function addMapControl(){        
+var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE}); 
+map.addControl(ctrl_nav);       
+var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1}); 
+map.addControl(ctrl_ove);        
+var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT}); 
+map.addControl(ctrl_sca);    
+}   
+initMap();
+function addInfo(marker,pt){
+var myGeo = new BMap.Geocoder(); 
+myGeo.getLocation(pt, function (rs) { 
+var addComp = rs.addressComponents; 
+var info=new BMap.InfoWindow('&地址&');
+marker.addEventListener("onclick", function(){this.openInfoWindow(info)});
+marker.addEventListener("onmouseover", function(){this.openInfoWindow(info)});
+}); 
+}
+</script>
+</html>

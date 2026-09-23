@@ -1,0 +1,1 @@
+﻿时间:2022/8/27 6:33:59,DbObjectSql.ExcuteSuccess.异常：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP 提供程序, error: 0 - 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。), SQL语句：update tb_logininfo set exittime='2022/8/25 21:13:52',state='离线' where userid='271财务部主管' and DATEDIFF(d,logintime,getdate())>0 and state='在线'

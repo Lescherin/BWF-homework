@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cfg>
+  <dbstring>dbstr</dbstring>
+  <urlstr>http://service.weijinbank.com:9090/wjh-api-web/router/rest</urlstr>
+  <banktype>
+    <item id="01">借记卡</item>
+  </banktype>
+  <bank>
+    <item id="866200">中国工商银行</item>
+    <item id="867400">中信银行</item>
+    <item id="866000">中国邮政储蓄银行</item>
+    <item id="866100">中国银行</item>
+    <item id="866600">中国民生银行</item>
+    <item id="866300">中国农业银行</item>
+    <item id="866500">中国建设银行</item>
+    <item id="866900">招商银行</item>
+    <item id="867600">兴业银行</item>
+    <item id="865700">平安银行</item>
+    <item id="866400">交通银行</item>
+    <item id="865800">华夏银行</item>
+    <item id="866800">广东发展银行</item>
+    <item id="867200">光大银行</item>
+  </bank>
+  <cardtype>
+    <item id="00">身份证</item>
+  </cardtype>
+  <categoryCodes>REPAYPLAN_CONFIG,REPAYPLAN_PARAMS,REPAYPLAN_SYSTEM,REPAYPLAN_EXTINFO,REPAYPLAN_SYSTEM,REPAYPLAN_EXTINFO_precision,REPAYPLAN_EXTINFO_roundingMode,REPAYPLAN_EXTINFO_deviationMode,REPAYPLAN_EXTINFO_daysPerMonth,REPAYPLAN_EXTINFO_daysPerYear</categoryCodes>
+</cfg>

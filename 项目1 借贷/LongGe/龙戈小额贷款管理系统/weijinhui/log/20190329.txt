@@ -1,0 +1,74 @@
+ERROR,2019-03-29 10:40:20,窗体初始化：{"code":"000000","msg":"处理成功","result":{"data":{"REPAYPLAN_CONFIG":[{"categoryCode":"REPAYPLAN_CONFIG","categoryName":"还款方式","id":158,"remark":"","sortNo":1,"valueCode":"[系统模板]等额本息","valueDescription":"{ \"loginId\": \"weijinli\", \"operator\": \"weijinli\", \"requestIp\": \"192.168.1.132\", \"principal\": \"100000\", \"count\": \"12\", \"rateValue\": \"0.10\", \"rateUnit\": \"y\", \"firstRepayDate\": \"2017-01-11\", \"intervalValue\": \"2\", \"intervalUnit\": \"m\", feeInfos: [{ \"feeId\": \"principal\", \"feeName\": \"本期本金\", \"feeValue\": \"本金*月利率*Math.pow((1+月利率),(本期期号-1))/(Math.pow((1+月利率),期数)-1)\", \"beginNumber\": \"1\", \"endNumber\": \"期数\" }, { \"feeId\": \"interest\", \"feeName\": \"本期利息\", \"feeValue\": \"本金*月利率*(Math.pow((1+月利率),期数)-Math.pow((1+月利率),(本期期号-1)))/(Math.pow((1+月利率),期数)-1)\", \"beginNumber\": \"1\", \"endNumber\": \"期数\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"本期期号*111\", \"beginNumber\": \"1\", \"endNumber\": \"10\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"100\", \"beginNumber\": \"11\", \"endNumber\": \"12\" }, { \"feeId\": \"gpsFee\", \"feeName\": \"GPS费用\", \"feeValue\": \"GPS费用\", \"beginNumber\": \"1\", \"endNumber\": \"5\" }, { \"feeId\": \"comeFee\", \"feeName\": \"保护费\", \"feeValue\": \"保护费\", \"beginNumber\": \"4\", \"endNumber\": \"5\" }], \"parameters\": { \"GPS费用\": \"本金*0.001\", \"保护费\": \"月利率*0.1*本金\" }, \"extendInfo\": { \"precision\":\"4\", \"roundingMode\":\"4\", \"deviationMode\":\"2\" } }","version":"0"},{"categoryCode":"REPAYPLAN_CONFIG","categoryName":"还款方式","id":159,"remark":"","sortNo":2,"valueCode":"[系统模板]等额本金","valueDescription":"{ \"loginId\": \"weijinli\", \"operator\": \"weijinli\", \"requestIp\": \"192.168.1.132\", \"principal\": \"100000\", \"count\": \"12\", \"rateValue\": \"0.10\", \"rateUnit\": \"y\", \"firstRepayDate\": \"2017-01-11\", \"intervalValue\": \"1\", \"intervalUnit\": \"m\", feeInfos: [{ \"feeId\": \"principal\", \"feeName\": \"本期本金\", \"feeValue\": \"本金/期数\", \"beginNumber\": \"1\", \"endNumber\": \"期数\" }, { \"feeId\": \"interest\", \"feeName\": \"本期利息\", \"feeValue\": \"前期剩余本金*月利率\", \"beginNumber\": \"1\", \"endNumber\": \"期数\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"本期期号*100\", \"beginNumber\": \"1\", \"endNumber\": \"10\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"22*本期期号\", \"beginNumber\": \"11\", \"endNumber\": \"12\" }, { \"feeId\": \"gpsFee\", \"feeName\": \"GPS费用\", \"feeValue\": \"本期本金*0.001\", \"beginNumber\": \"1\", \"endNumber\": \"5\" }, { \"feeId\": \"comeFee\", \"feeName\": \"保护费\", \"feeValue\": \"保护费\", \"beginNumber\": \"4\", \"endNumber\": \"5\" }, { \"feeId\": \"principalAboutFee\", \"feeName\": \"用到本期本金的某项费用\", \"feeValue\": \"本期本金 + 1.1111\", \"beginNumber\": \"11\", \"endNumber\": \"12\" }], \"parameters\": { \"保护费\": \"本金/期数*月利率/2\" }, \"extendInfo\": {     \"precision\":\"4\", \"roundingMode\":\"4\", \"deviationMode\":\"0\", \"daysPerMonth\":\"30\" }}","version":"0"},{"categoryCode":"REPAYPLAN_CONFIG","categoryName":"还款方式","id":160,"remark":"","sortNo":3,"valueCode":"[系统模板]先息后本","valueDescription":"{ \"loginId\": \"weijinli\", \"operator\": \"weijinli\", \"requestIp\": \"192.168.1.132\", \"principal\": \"100000\", \"count\": \"12\", \"rateValue\": \"0.10\", \"rateUnit\": \"y\", \"firstRepayDate\": \"2017-01-11\", \"intervalValue\": \"1\", \"intervalUnit\": \"m\", feeInfos: [{ \"feeId\": \"principal\", \"feeName\": \"本期本金\", \"feeValue\": \"本金\", \"beginNumber\": \"期数\", \"endNumber\": \"期数\" }, { \"feeId\": \"interest\", \"feeName\": \"本期利息\", \"feeValue\": \"本金*月利率\", \"beginNumber\": \"1\", \"endNumber\": \"期数\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"本期期号>5 ? 本期期号*100 : 111\", \"beginNumber\": \"1\", \"endNumber\": \"9\" }, { \"feeId\": \"serviceFee\", \"feeName\": \"服务费\", \"feeValue\": \"222\", \"beginNumber\": \"10\", \"endNumber\": \"12\" }, { \"feeId\": \"gpsFee\", \"feeName\": \"GPS费用\", \"feeValue\": \"GPS费用\", \"beginNumber\": \"1\", \"endNumber\": \"5\" }, { \"feeId\": \"comeFee\", \"feeName\": \"保护费\", \"feeValue\": \"保护费\", \"beginNumber\": \"4\", \"endNumber\": \"5\" }], \"parameters\": { \"GPS费用\": \"本金*0.001\", \"保护费\": \"利率*0.1 + 本金/期数*0.0002\" }, \"extendInfo\": { \"precision\":\"4\", \"precision\":\"2\", \"roundingMode\":\"4\", \"deviationMode\":\"2\" }}","version":"0"}],"REPAYPLAN_EXTINFO":[{"categoryCode":"REPAYPLAN_EXTINFO","categoryName":"扩展参数","id":139,"remark":"","sortNo":1,"valueCode":"precision","valueDescription":"精度","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO","categoryName":"扩展参数","id":140,"remark":"","sortNo":2,"valueCode":"roundingMode","valueDescription":"舍入模式","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO","categoryName":"扩展参数","id":141,"remark":"","sortNo":3,"valueCode":"deviationMode","valueDescription":"误差处理","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO","categoryName":"扩展参数","id":142,"remark":"","sortNo":4,"valueCode":"daysPerMonth","valueDescription":"每月天数","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO","categoryName":"扩展参数","id":143,"remark":"","sortNo":5,"valueCode":"daysPerYear","valueDescription":"每年天数","version":"0"}],"REPAYPLAN_EXTINFO_daysPerMonth":[{"categoryCode":"REPAYPLAN_EXTINFO_daysPerMonth","categoryName":"扩展参数-每月天数","id":152,"remark":"","sortNo":1,"valueCode":"28","valueDescription":"28天","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_daysPerMonth","categoryName":"扩展参数-每月天数","id":153,"remark":"","sortNo":2,"valueCode":"29","valueDescription":"29天","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_daysPerMonth","categoryName":"扩展参数-每月天数","id":154,"remark":"","sortNo":3,"valueCode":"30","valueDescription":"30天","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_daysPerMonth","categoryName":"扩展参数-每月天数","id":155,"remark":"","sortNo":4,"valueCode":"31","valueDescription":"31天","version":"0"}],"REPAYPLAN_EXTINFO_daysPerYear":[{"categoryCode":"REPAYPLAN_EXTINFO_daysPerYear","categoryName":"扩展参数-每年天数","id":156,"remark":"","sortNo":1,"valueCode":"365","valueDescription":"365天","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_daysPerYear","categoryName":"扩展参数-每年天数","id":157,"remark":"","sortNo":2,"valueCode":"366","valueDescription":"366天","version":"0"}],"REPAYPLAN_EXTINFO_deviationMode":[{"categoryCode":"REPAYPLAN_EXTINFO_deviationMode","categoryName":"扩展参数-误差处理","id":149,"remark":"","sortNo":1,"valueCode":"0","valueDescription":"不处理","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_deviationMode","categoryName":"扩展参数-误差处理","id":150,"remark":"","sortNo":2,"valueCode":"1","valueDescription":"首期处理","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_deviationMode","categoryName":"扩展参数-误差处理","id":151,"remark":"","sortNo":3,"valueCode":"2","valueDescription":"末期处理","version":"0"}],"REPAYPLAN_EXTINFO_precision":[{"categoryCode":"REPAYPLAN_EXTINFO_precision","categoryName":"扩展参数-精度","id":144,"remark":"","sortNo":1,"valueCode":"N","valueDescription":"保留N位小数","version":"0"}],"REPAYPLAN_EXTINFO_roundingMode":[{"categoryCode":"REPAYPLAN_EXTINFO_roundingMode","categoryName":"扩展参数-舍入模式","id":145,"remark":"","sortNo":1,"valueCode":"0","valueDescription":"向上进位","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_roundingMode","categoryName":"扩展参数-舍入模式","id":146,"remark":"","sortNo":2,"valueCode":"1","valueDescription":"向下截取","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_roundingMode","categoryName":"扩展参数-舍入模式","id":147,"remark":"","sortNo":3,"valueCode":"4","valueDescription":"四舍五入","version":"0"},{"categoryCode":"REPAYPLAN_EXTINFO_roundingMode","categoryName":"扩展参数-舍入模式","id":148,"remark":"","sortNo":4,"valueCode":"5","valueDescription":"五舍六入","version":"0"}],"REPAYPLAN_PARAMS":[{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":120,"remark":"","sortNo":1,"valueCode":"principal","valueDescription":"本金","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":121,"remark":"","sortNo":2,"valueCode":"count","valueDescription":"期数","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":122,"remark":"","sortNo":3,"valueCode":"rateValue","valueDescription":"利率值","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":123,"remark":"","sortNo":4,"valueCode":"rateUnit","valueDescription":"利率单位","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":124,"remark":"","sortNo":5,"valueCode":"firstRepayDate","valueDescription":"首期还款日期","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":125,"remark":"","sortNo":6,"valueCode":"intervalValue","valueDescription":"还款间隔数值","version":"0"},{"categoryCode":"REPAYPLAN_PARAMS","categoryName":"基本参数","id":126,"remark":"","sortNo":7,"valueCode":"intervalUnit","valueDescription":"还款间隔单位","version":"0"}],"REPAYPLAN_SYSTEM":[{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":127,"remark":"","sortNo":1,"valueCode":"年利率","valueDescription":"年利率","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":128,"remark":"","sortNo":2,"valueCode":"月利率","valueDescription":"月利率","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":129,"remark":"","sortNo":3,"valueCode":"日利率","valueDescription":"日利率","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":130,"remark":"","sortNo":4,"valueCode":"前期剩余本金","valueDescription":"前期剩余本金","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":131,"remark":"","sortNo":5,"valueCode":"前期期号","valueDescription":"前期期号","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":132,"remark":"","sortNo":6,"valueCode":"前期本金","valueDescription":"前期本金","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":133,"remark":"","sortNo":7,"valueCode":"前期利息","valueDescription":"前期利息","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":134,"remark":"","sortNo":8,"valueCode":"前期XX费","valueDescription":"前期XX费","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":135,"remark":"","sortNo":9,"valueCode":"本期期号","valueDescription":"本期期号","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":136,"remark":"","sortNo":10,"valueCode":"本期本金","valueDescription":"本期本金","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":137,"remark":"","sortNo":11,"valueCode":"本期利息","valueDescription":"本期利息","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":138,"remark":"","sortNo":12,"valueCode":"本期XX费","valueDescription":"本期XX费","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":176,"remark":"","sortNo":13,"valueCode":"本期天数","valueDescription":"本期天数","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":177,"remark":"","sortNo":14,"valueCode":"本期日期","valueDescription":"本期日期","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":178,"remark":"","sortNo":15,"valueCode":"下期天数","valueDescription":"下期天数","version":"0"},{"categoryCode":"REPAYPLAN_SYSTEM","categoryName":"系统参数（环境变量）","id":179,"remark":"","sortNo":16,"valueCode":"下期日期","valueDescription":"下期日期","version":"0"}]}}}
+ERROR,2019-03-29 10:40:26,入参：{
+  "principal": "100000",
+  "count": "12",
+  "rateValue": "0.10",
+  "rateUnit": "y",
+  "firstRepayDate": "2017-01-11",
+  "intervalValue": "2",
+  "intervalUnit": "m",
+  "feeInfos": [
+    {
+      "FeeId": "principal",
+      "FeeName": "本期本金",
+      "FeeValue": "本金*月利率*Math.pow((1+月利率),(本期期号-1))/(Math.pow((1+月利率),期数)-1)",
+      "BeginNumber": "1",
+      "EndNumber": "期数",
+      "ExtendInfo": null
+    },
+    {
+      "FeeId": "interest",
+      "FeeName": "本期利息",
+      "FeeValue": "本金*月利率*(Math.pow((1+月利率),期数)-Math.pow((1+月利率),(本期期号-1)))/(Math.pow((1+月利率),期数)-1)",
+      "BeginNumber": "1",
+      "EndNumber": "期数",
+      "ExtendInfo": null
+    },
+    {
+      "FeeId": "0Rc70cWTE7q0rXqBqCmGwg==",
+      "FeeName": "服务费",
+      "FeeValue": "本期期号*111",
+      "BeginNumber": "1",
+      "EndNumber": "10",
+      "ExtendInfo": null
+    },
+    {
+      "FeeId": "0Rc70cWTE7q0rXqBqCmGwg==",
+      "FeeName": "服务费",
+      "FeeValue": "100",
+      "BeginNumber": "11",
+      "EndNumber": "12",
+      "ExtendInfo": null
+    },
+    {
+      "FeeId": "2gacXdhOYhVKg8UmiL5l6Q==",
+      "FeeName": "GPS费用",
+      "FeeValue": "GPS费用",
+      "BeginNumber": "1",
+      "EndNumber": "5",
+      "ExtendInfo": null
+    },
+    {
+      "FeeId": "uATriUOPIJVJoieOY9XI3w==",
+      "FeeName": "保护费",
+      "FeeValue": "保护费",
+      "BeginNumber": "4",
+      "EndNumber": "5",
+      "ExtendInfo": null
+    }
+  ],
+  "parameters": {
+    "GPS费用": "本金*0.001",
+    "保护费": "月利率*0.1*本金"
+  },
+  "extendInfo": {
+    "precision": "4",
+    "roundingMode": "4",
+    "deviationMode": "2",
+    "daysPerMonth": "30"
+  },
+  "loginId": "boweifeng",
+  "operater": "boweifeng",
+  "requestIp": "172.16.66.183"
+}
+ERROR,2019-03-29 10:40:26,返回值：{"code":"999999","msg":"系统内部处理异常"}

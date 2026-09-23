@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+<center>
+<table width="900" border="1" cellspacing="0" bordercolor="DarkGray">
+  <tr>
+    <td width="70%" align="center" valign="middle" style="background-color: inactivecaption">
+      <font color="#FFFFFF">
+        <strong>指标名称</strong>
+      </font>
+    </td>
+    <td width="30%" align="center" valign="middle" style="background-color: inactivecaption">
+      <font color="#FFFFFF">
+        <strong>评分标准</strong>
+      </font>
+    </td>
+  </tr>
+&Content1;
+</table>
+</center>
+</body>
+</html>
