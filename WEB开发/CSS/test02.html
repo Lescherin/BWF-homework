@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+        <style>
+/*样式表选择器1：一般选择器，分为4种类型：
+    1.id属性值选择器：#id属性值
+    2.一般属性选择器：[属性名] =等于
+    3.类选择器：.类名{属性值}
+    4.标签名选择器：标签名{属性值}
+*/
+
+
+/*
+1. id属性值选择器：#id属性值
+    格式：#id属性{属性值}
+    表示定位的是html页面中id='该id属性值'的标签。由于id属性值唯一，所以定位速度快，优先级最高
+*/
+#div1 {
+    color: red;
+}         
+/*
+  2. 一般属性选择器：
+    2.1格式：[属性名]
+    表示定位的是html页面中存在该属性名的标签。
+*/
+
+[readonly] {
+    font-size: 36px;
+}
+
+/*
+    2.2格式：[属性名=属性值] =等于
+    表示定位的是html页面中存在该属性名的标签。
+*/
+[name="a2"] {
+    color: green;
+    text-align: left;
+}   
+
+/* 
+    2.3格式：[属性名*=文字] *包含
+    表示定位的是html页面中属性名包含该文字的标签。
+*/
+[name*="CCB"] {
+    color: rgb(157, 255, 0);
+    text-align: left;
+    background-color: yellow;
+}
+
+/*
+    2.4格式：[属性名^=文字] ^开头
+    表示定位的是html页面中属性名以该文字开头的标签。
+*/
+[name^="U"] {
+    color: rgb(255, 0, 0);
+    text-align: left;
+    font-size: 36px;
+}
+/*
+    2.5格式：[属性名$=文字] $结尾
+    表示定位的是html页面中属性名以该文字结尾的标签。
+*/
+[name$="123"] {
+    color: rgb(25, 0, 255);
+    text-align: left;
+    font-size: 12px;
+}
+
+/*
+    3.class选择器：.类名{属性值}
+    表示定位的是html页面中类名='该类名'的标签。由于类名可以重复，所以定位速度慢，优先级低。
+    class属性值可能存在空格，多个类名用空格隔开。
+    .类名称能定位到所有class属性值包含该类名的标签。
+*/
+.a2 {
+    color: red;
+}
+
+/*这里面不隔开，表示同时定位到所有class属性值包含a3和a1的标签*/
+.a3.a1 {
+    color: blue;
+}
+
+/*后写的类名会覆盖先写的类名*/
+.a2 {
+    color: green;
+}
+
+/*
+    4. 标签名选择器：标签名{属性值}
+    表示定位的是html页面中存在该标签名的标签。
+*/
+body{
+    background-color: rgba(0, 26, 255, 0.349);
+}
+
+
+        </style>
+    </head>
+    
+    
+    <body>
+        <div id="div1">这是第一个div标签</div>
+        <div id="div2">这是第二个div标签</div>
+        <input type="text" value="aaa"><br>
+        <input type="text" value="bbb" readonly>
+        <br>
+        <diy name="a1">AAA</diy>
+        <diy name="a2">BBB</diy>
+        <br>
+        <input type="text" name="CCB" value="T1">
+        <input type="text" name="U1" value="T2">
+        <input type="text" name="A123" value="T3">
+        <br>
+        <div class="a1 a2">这是第一个div标签</div>
+        <div class="a1 a3">这是第二个div标签</div>
+        <div class="a2">这是第三个div标签</div>
+    </body>
+</html>

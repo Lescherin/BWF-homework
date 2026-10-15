@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+        <style>
+/*
+当使用一般选择器无法精确定位所需的目标元素时，
+通常是因为存在多个元素满足（相似）该选择器的条件，仅一般选择器无法精确定位。
+则可以通过其他元素参与配合进行定位，
+包括定位的是：某父元素下的该子元素、某父元素下的该后代元素、某父元素下的该相邻兄弟元素。
+    2.派生选择器：分为3种派生
+    2.1.子选择器（父子派生）： 定位的是某父元素下的该子元素，从而派出了不在该父元素下的其他元素。
+    父元素 > 子元素
+
+    2.2.后代选择器（祖先后代派生）： 定位的是某父元素下的该后代元素，从而派出了不在该父元素下的其他元素。
+    父元素  后代元素
+    
+    2.3.相邻兄弟选择器（相邻兄弟派生）： 定位的是某父元素下的该相邻兄弟元素，从而派出了不在该父元素下的其他元素。
+    父元素 + 相邻兄弟元素
+
+*/
+
+/* 子选择器（父子派生）： */
+#div1 > p{
+    color: red;
+}
+
+/* 后代选择器（祖先后代派生）： */
+#div3 font{
+    color: blue;
+}
+
+/* 相邻兄弟选择器（相邻兄弟派生）： */
+[name="a1"] + input{
+    background-color: gray;
+}
+[name="a2"] + input{
+    background-color: pink;
+    font-size: 20px;
+}
+
+/*组合选择器（多个选择器同时定位）： */
+#div4  [name="a2"] + br + input{
+    color: gold;
+    font-size: 38px;
+}
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+            <div id="div1">
+                <p>这是一个段落</p>
+            </div>
+
+            <div id="div2">
+                <p>这是一个段落</p>
+            </div>
+
+            <div id="div3">
+                <p>这是一个段落
+                    <font>内元素</font>
+                </p>
+            </div>
+
+            <div>
+                <input type="text" name="a1" value="AAA">
+                <input type="text" name="a2" value="BBB">
+                <input type="text" name="a3" value="CCC">
+            </div>
+
+            <div id="div4">
+                <input type="text" name="a1" value="AAA">
+                <input type="text" name="a2" value="BBB">
+                <br>
+                <input type="text" name="a3" value="CCC">
+            </div>
+    </body>
+</html>
