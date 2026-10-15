@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>HTML 测试02</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <!--div标签是块级元素标签，用于指定文档的块级元素，显示在浏览器的窗口中 
+        表示页面上的一块区域，可以包含其他元素 默认是自上而下,占满父元素的宽度-->
+        <div align="center">
+            CCB
+            CCA
+        </div>
+        <div align="center" width="50%">
+            <a href=test01.html>点击跳转1</a>
+            <a href=test02.html>点击跳转2</a>
+        </div>
+   
+        <br>
+            <!--form标签是表单元素标签，用于创建表单，包含输入框、提交按钮等元素.但是标签内的标可以实现表单信息的提交
+            如果不适用form标签，则无法实现表单信息的提交,属性值固定method\action\name
+            method属性指定表单数据提交的方式，get或post 
+            区别是get方式提交数据时,数据会显示在URL地址中,而post方式提交数据时,数据不会显示在URL地址中
+            action属性指定表单数据提交的URL地址
+            name属性指定表单的名称，用于在表单提交时识别表单,通常由javascript使用,所以名称命名通常需要唯一,且数字不能开头,不带空格等特殊字符,只能包含字母、数字、下划线、短横线等
+            表单内的空间信息,会提交到action属性指定的URL地址,必须拥有name和value属性,否则提交时,会提交空值
+            -->
+        <form  method="get" action="test01.html" name="loginForm" >
+            <!--
+            input标签是输入框标签，用于创建输入框，包含文本输入框、密码输入框、单选框、复选框等
+            可以输入文本、密码、单选、复选等,通过type属性指定输入框的类型
+            name属性指定输入框的名称，用于在表单提交时识别输入框,通常由javascript使用,所以名称命名通常需要唯一,且数字不能开头,不带空格等特殊字符,只能包含字母、数字、下划线、短横线等
+            type="text"指定文本输入框
+            type="password"指定密码输入框,输入的密码会以掩码显示,无法拷贝出里面的密码
+
+            text和password属性都有readonly属性,指定输入框只读,用户不能修改输入框中的内容
+            
+            有value属性,指定输入框的默认值,用户可以在输入框中输入,也可以直接提交表单
+            readonly是表示逻辑真假的布尔boolean类型,如果设置为true,则输入框只读,用户不能修改输入框中的内容
+            type="radio"指定单选框(小圆点),同name属性的单选框,具备切换选择的功能
+            为了表单正常提交数据,需要指定单选框的value属性;否则提交时,会提交空值
+            type="checkbox"指定复选框,用户可以选择多个选项,
+            通常每个checkbox使用不同name属性,checkbox无需value属性,因为不选择时value='OFF',选择时value='ON'
+            radio和checkbox都有checked属性,指定是否默认选中,属于布尔boolean类型
+            type="submit"指定提交按钮,点击后会提交表单数据,并跳转到action属性指定的URL地址
+            type="reset"指定重置按钮,点击后会重置表单数据,将所有输入框输入的内容清空,并将单选框和复选框的默认选中状态取消
+            type="button"指定按钮,点击后不会提交表单数据,默认没有功能，只有定义按钮的事件属性才能实现功能
+            事件属性：onXXX 表示当事件发生时,会执行事件属性指定的javascript代码
+            事件属性的值必须是javascript代码,不能是html代码
+            onclick事件属性指定按钮点击后,会执行的javascript代码
+            例如：onclick="alert('hello world')"
+            ondblclick事件属性指定按钮双击后,会执行的javascript代码
+            例如：ondblclick="alert('hello world')"
+            onmouseover事件属性指定鼠标悬停在按钮上时,会执行的javascript代码
+            onmouseout事件属性指定鼠标移出按钮时,会执行的javascript代码
+            onmousedown事件属性指定鼠标点击按钮时,会执行的javascript代码
+            onmouseup事件属性指定鼠标松开按钮时,会执行的javascript代码
+            body有onload事件属性,指定页面加载完成后,会执行的javascript代码
+
+            button,submit,reset的value属性表示按钮的文本内容
+            都有disabled属性,指定是否禁用按钮,如果设置为true,则按钮不能点击表单数据
+
+            拓展输入框类型
+            type="range"指定滑动条输入框,用户可以拖动滑动条,选择一个数值,数值的范围在min和max之间
+            type='date',type='time',type='datetime-local'指定日期和时间输入框,用户可以输入日期和时间,格式为yyyy-MM-dd和HH:mm:ss
+            type='color'指定颜色选择框,用户可以选择颜色,格式为#RRGGBB
+
+
+            -->
+            <div>
+                <input type="text" name="username" value="admin" readonly>
+                <input type="password" name="userpwd" placeholder="请输入密码">
+                <br>
+                身份:
+                <input type="radio" name="gender" value="M" checked>男
+                <input type="radio" name="gender" value="F">女
+                <input type="radio" name="major" value="E">员工
+                <input type="radio" name="major" value="G" checked>游客
+                <br>
+                padding: 10px;
+                口味喜好:
+                <input type="checkbox" name="sweet" value="甜" checked>甜
+                <input type="checkbox" name="sour" value="酸">酸
+                <input type="checkbox" name="bitter" value="苦">苦
+                <input type="checkbox" name="spicy" value="辣" checked>辣
+                <br>
+                padding: 10px;
+                <input type="checkbox" name="remember" value="remember">记住密码
+                <br>
+                padding: 10px;
+                <input type="submit" value="登录">
+                <input type="reset" value="取消">
+                <input type="button" value="按钮" onclick="alert('hello world')">
+                <br>
+                <input type="range" name="age" min="0" max="120" value="20">
+                <br>
+                <input type="date" name="birthday" value="2023-01-01">
+                <br>
+                <input type="time" name="time" value="12:00:00">
+                <br>
+                <input type="datetime-local" name="datetime" value="2023-01-01T12:00:00">
+                <br>
+                <input type="color" name="color" value="#FF0000">
+                <br>
+            </div>
+            
+        </form>
+    </body>
+</html>

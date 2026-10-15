@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <!--This is HTML FILE 注释文本：可多行不可嵌套-->
+    <!-- !DOCTYPE 是文件类型标签，因为要与XML等其他区分大小写的标记语言共用标签，所以该标签必须大写-->
+    <!-- !DOCTYPE标签必须卸载html文件的最前面，即它前面不可以有任何文字 包括注释-->
+    <!-- !DOCTYPE标签是属性有html与xml，不写属性值-->
+<html> <!--html标签是双标签-->
+    <head>   
+        <title>入门练习</title>
+        <!-- title标签是文档标题标签，通常没有属性值，用于指定文档的标题，显示在浏览器的标签页上 -->
+         <link rel="icon" href="../Asset/baidu.ico">
+         <!-- CSS文件链接  <link rel="stylesheet" type="text/css" href="style.css">  -->
+        <!--
+        link标签是链接标签，表示连接的外部文件,所链接的外部文件随文档加载，通常用于加载CSS文件，显示在浏览器的标签页上 
+        rel属性：指定链接的关系，值为stylesheet表示链接的外部文件是CSS文件,属性值固定为stylesheet,也有其他值如icon,alternate等
+        type属性：指定链接的外部文件的类型，值为text/css表示链接的外部文件是CSS文件
+        href属性：指定链接的外部文件的URL，值为style.css表示链接的外部文件是style.css文件
+        -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--
+        meta标签表示该html页面某方面的特性,具体是哪方面的特性和具体什么特性值，值为UTF-8表示该页面的字符编码为UTF-8,属性值固定为UTF-8,也有其他值如ISO-8859-1等
+        http-equiv属性：指定该页面的字符编码，值为UTF-8表示该页面的字符编码为UTF-8,属性值固定为UTF-8,也有其他值如ISO-8859-1等
+        charset属性：指定该页面的字符编码，值为UTF-8表示该页面的字符编码为UTF-8,属性值固定为UTF-8,也有其他值如ISO-8859-1等
+        -->
+        <!-- style标签是内联样式标签，用于指定文档的样式，显示在浏览器的窗口中 -->
+        <style>
+            h1{
+                color: red;
+            }
+        </style>
+        <!-- script标签是内联脚本标签，用于指定文档的脚本，显示在浏览器的窗口中 -->
+        <script>
+            document.write("MANBA OUT");
+        </script>
+        <!-- 引入外部 JS 文件 -->
+        <script src="../JS/test01.js"></script>
+    </body>
+</html>
+    </head>
+    <body>   <!-- body标签是文档主体标签，用于指定文档的主体内容，显示在浏览器的窗口中 -->
+        <h1>冰红茶老大</h1>
+        <p>man!</p>
+        <div style="text-align: center;">
+        <img src="../Asset/Laoda.webp" alt="冰红茶老大" height="600" >
+        <a href="https://www.bing.com/search?q=科比" target="_blank">跳转</a>
+        <!--
+        a标签是链接标签，用于指定文档的链接，显示在浏览器的窗口中 
+        href属性：指定链接的URL
+        target属性：指定链接的打开方式，值为blank表示链接在新窗口打开
+        默认情况下，链接会在当前窗口打开
+        -->
+        <!-- 
+        img标签是图片标签，用于指定文档的图片，显示在浏览器的窗口中 
+        如果只用一个width或者height属性，图片会等比例缩放
+        alt属性：指定图片的替代文本，值为冰红茶老大表示图片的替代文本是冰红茶老大
+         -->
+        
+        </div>
+    </body>
+</html>

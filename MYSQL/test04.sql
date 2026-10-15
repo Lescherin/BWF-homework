@@ -160,3 +160,8 @@ FROM student;
 
 SELECT sname,address,REPLACE(REPLACE(address,'省',''),'市','') AS 籍贯
 FROM student;
+
+CREATE VIEW VW_test ON STUDENT;
+
+CREATE INDEX  INX_Student
+ON studnet(sid,sname);

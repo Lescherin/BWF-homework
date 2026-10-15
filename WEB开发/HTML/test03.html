@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>测试03</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!--select标签是下拉列表框标签 内部包含option标签,表示下拉列表中一个选项
+            内部只能是文字,表示选项的显示内容 默认选中第一个选项
+            selected属性指定默认选中的选项 可不写selected属性
+            select在form表单内,需要添加name属性,用于提交表单数据,option标签需要添加value属性,用于提交表单数据
+            option标签不定义value属性,则默认使用option标签的显示内容作为value属性
+            form提交时brand=huawei,表示用户选择了华为品牌
+        -->
+        <form action="test01.html" method="get">
+        <p>请选择您的手机品牌:</p>
+        <select name="brand" id="logo">
+            <option selected="selected">请选择</option>
+            <option value="huawei">华为</option>
+            <option value="xiaomi">小米</option>
+            <option value="oppo">oppo</option> 
+            <option value="vivo">vivo</option> 
+            <option value="apple">苹果</option>
+            <option>其他</option>
+        </select>
+        <input type="submit" value="提交">
+        </form>
+        <table border="1">
+            <tr height="50">
+                <th>学号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>张三</td>
+                <td>18</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>李四</td>
+                <td>19</td>
+                <td>女</td>
+            </tr>
+        </table>
+
+        <!--table标签是表格标签 内部包含tr标签:tr表示表格的一行 内部包含td标签:td表示表格的一行中的一列一单元格
+        tr标签可以包含多个td标签,每个td标签表示表格的一列一单元格
+        td标签可以包含文字,图片,链接等内容
+        table内主要是tr子标签
+        tr内主要是td子标签
+        td内可以是任何HTML标签,主要是文字,图片,链接等内容
+        表格边框属性border,默认值为0,表示没有边框
+        可以设置为其他数值,表示边框的宽度
+        表格的边框行高列宽的定义,大多使用CSS样式表来实现
+        table标签使用border属性设置边框宽度,属性值是数字,单位是像素
+        tr标签使用border属性设置边框宽度,属性值是数字,单位是像素,单独针对这一行
+        td标签使用border属性设置边框宽度,属性值是数字,单位是像素,可以定义在td标签内,表示整列
+        -->
+    </body>
+</html>
