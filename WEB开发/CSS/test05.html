@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+        <style>
+/*
+3.伪类选择器,不能独立使用,是对选择器的修饰,表示限定某特定状态的元素：
+web元素的一般选择器:伪类名,其中一般选择器大多使用标签名
+    3.1 超链接a标签的伪类选择器：
+    a:link          未访问的超链接
+    a:visited       已访问的超链接
+    a:hover         鼠标悬停在超链接上时的状态
+    a:active        点击超链接时的状态，仅在IE浏览器中有效 
+    要求:这些伪类如果被定义,则必须按照顺序定义,不能跳过某个伪类,否则会导致错误
+*/   
+a:link{
+    color: red;
+}
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: green;
+}
+a:active{
+    color: yellow;
+    background-color: pink;
+}
+/*
+    3.2 子元素的伪类选择器：用于父子派生和祖先后代派生选择器中的子元素,后代元素。表示第几个子元素
+    父元素> 子元素:first-child  表示：div下的第一个子标签
+    父元素> 子元素:first-of-type  表示：div下的第一个该类型的子标签
+    父元素> 子元素:nth-child(2)  表示：div下的第二个子标签
+    父元素> 子元素:nth-of-type(2)  表示：div下的第二个该类型的子标签
+
+    类型选择器：根据元素的类型进行选择,类似限定词,用于筛选出符合要求的元素。
+    例如：input,select,textarea等
+
+    first-child   last-child  nth-child(x) nth-last-child(x)
+    first-of-type last-of-type nth-of-type(x) nth-last-of-type(x)
+*/
+#a1 > input:last-child{   /* 定位不到 */
+    /* 
+    原因是:div下的最后一个子标签是br,而不是input的最后一个子标签 
+    所以没有任何`<input>` 同时满足"是 input"且"是最后一个子元素"
+    总结:child选择器只能定位到父元素直接子元素,不管类型 类型不匹配没法选中
+    */
+    font-size: 38px;
+    background-color: gold;
+}
+#a1 > input:last-of-type{
+    font-size: 14px;
+    background-color: pink;
+}
+#a1 > input:nth-child(2){    /* 定位不到 */
+    color: red;
+}
+#a1 > input:nth-of-type(2){
+       color: gold;
+}
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <a href="test01.html">这是一个超链接</a>
+        </div>
+        <div>
+            <a href="test02.html">这是一个超链接</a>
+        </div>
+        <div>
+            <a href="test03.html">这是一个超链接</a>
+        </div>
+        <div>
+            <a href="test04.html">这是一个超链接</a>
+        </div>
+        <div>
+            <a href="test05.html">这是一个超链接</a>
+        </div>
+        <div>
+            <a href="https://www.baidu.com">这是一个超链接</a>
+        </div>
+        <div id="a1">
+            <input type="text">1 <br>
+            <input type="text">2 <br>
+            <input type="text">3 <br>
+            <input type="text">4 <br>
+            <input type="text">5 <br>
+        </div>
+    </body>
+</html>

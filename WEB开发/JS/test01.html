@@ -1,0 +1,90 @@
+<!-- 
+javascript是一种脚本语言，用于在网页中添加交互功能
+如表单验证、页面跳转、动态内容更新等 常用于前端开发
+如React,Vue, Angular等前端框架
+javascript的语法与python类似，但是更简单
+
+javascript语言的基本语法
+1.严格区分大小写
+2.必须使用utf-8编码
+3.必须使用javascript标签包裹代码
+
+变量:允许定义变量(显式声明) 或不定义变量直接给变量赋值(隐式声明)
+变量的类型:数字、字符串、布尔值、对象、数组、函数等
+定义变量:使用var关键字定义变量
+var 变量名;
+变量名 = 值;
+
+可以定义变量的同时给变量赋值
+var 变量名 = 值;
+
+变量名称的命名规则:
+1.只能包含字母、数字、 下划线和美元符号
+2.不能以数字开头
+3.不能使用javascript保留字
+
+a123=100;
+a_123=200;
+a$123=300;
+$a123=400;
+_A123=100;
+
+别用:含义不明,虽然合法
+_=100;
+$_$=400;
+
+遵守的命名规范:
+1.使用驼峰命名法 ClassName 
+2.使用下划线命名法 class_name (蛇形命名法)
+3.使用匈牙利命名法 varClassName intAge 变量名前面表示数据类型
+        
+
+JS数据类型
+   1.数值类型  number  不区分整数和浮点数
+   2.字符串类型  string  可以使用单引号、双引号或反引号包裹
+   3.布尔值类型  boolean  只有两个值: true 和 false 不用引号包裹 
+   4.数组类型  array  数组对象内不要求每个元素的类型相同 可以存储不同类型的元素
+   Arr=[1,1.1,"hello world",true,null]
+   数组的索引从0开始
+   数组的长度可以使用length属性获取
+   数组的索引可以使用方括号[]访问 数组[索引] Arr[0] Arr[1] Arr[2] Arr[3] Arr[4]....
+   Arr.length 表示数组的长度,即数组中元素的个数
+   索引从0开始 length属性从1开始完全看个数
+   
+   5.对象类型  object  特点是对象有属性和方法 不同的对象可以有不同的属性和方法
+   使用某对象的属性: 对象名.属性名
+   使用某对象的方法: 对象名.方法名(参数)
+
+
+   6.函数类型  function  用于定义自定义操作
+   7.空类型  null  表示空值 
+
+HTML页面嵌入javascript代码
+1.内嵌式javascript代码
+    在html的<script>标签中直接写javascript代码
+2.外部式javascript代码
+    将javascript代码写在一个外部的js文件中,然后在html页面的<script>标签中引入该文件
+3.内联式javascript代码
+    在html页面的标签中使用onclick属性等事件属性,直接调用javascript函数
+-->
+
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+    <!-- 内嵌式javascript代码 -->
+    <script>
+        // 这是一个注释
+        console.log("hello world");
+        alert("hello world");
+    </script>
+
+    <!-- 引入外部式javascript代码 -->
+    <script src="main.js"></script>
+    </head>
+    
+    <!-- 内联式javascript代码 -->
+    <body>
+        <button onclick="sayHello()">点击我</button>
+    </body>
+</html>

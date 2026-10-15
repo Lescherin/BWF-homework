@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const h1 = document.querySelector('h1');
     const p = document.querySelector('p');
     const img = document.querySelector('img');
-    const div = document.querySelector('div');
+
 
     // ========== 1. 点击标题 - 随机变色 ==========
     h1.addEventListener('click', function() {

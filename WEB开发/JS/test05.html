@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+    <script>
+//document对象，表单的name属性值，表示该页面中指定的表单对象
+//document,表单name属性值.submit() 方法作用：提交表单数据
+//列子: document.f1.submit(); .号进行对name属性值的调用，提交表单数据 (可用id获取表单元素,使用getElementById()方法)
+//document,表单name属性值.reset() 方法作用：重置表单数据，将表单中的所有输入框清空
+//document,表单name属性值.在表单内的其他标签的属性值，表示该标签对象内的指定其他标签对象
+//document,表单name属性值.在表单内的其他标签的属性值,某属性值，表示该标签对象内的指定属性值
+//判断T1文本框中输入的文字长度是否大于等于10个字符,是则提交表单,否则提示用户输入的文字长度必须在10到20个字符之间
+function submit_form(){
+ // T1_len=document.f1.T1.value.length;
+    T1_len=document.getElementById("a1").value.length;
+    if(T1_len>=10 && T1_len<=20){
+       document.f1.submit();    //页面中f1表单执行提交
+       alert("提交成功");
+    }
+    else{
+        alert("输入的文字长度必须在10到20个字符之间");
+        if(confirm("是否强制提交？")){
+            document.f1.submit();
+            alert("强制提交成功");
+        }
+        else{
+            alert("提交失败");
+        }
+    }
+}
+    </script>  
+    </head>
+    <body>
+        <form name="f1" action="test01.html" method="get">
+            <input type="text" id="a1" name="T1">
+            <input type="button" id="b1" value="提交" onclick="submit_form();">
+            <input type="reset" id="c1" value="重置">
+        </form>
+    </body>
+</html>
