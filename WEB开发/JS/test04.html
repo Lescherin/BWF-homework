@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+    <script>
+    //document.write(); 方法作用是在当前文档中输出写入html代码，直接改写当前文档的内容
+    //change_window() 函数作用：完全改写当前页面的内容（输入框，按钮清空）,换成新页面生成一个跳转到百度链接的a标签
+    function change_window(){
+        document.write("<a href='https://www.baidu.com'>点击百度</a>");
+    }
+    </script>  
+    </head>
+    <body>
+        <script>
+            //在当前页面加载时，写入一个html代码，使得当前页面出现一个输入框
+            document.write("<input type='text' id='a1' name='PP'>");
+        </script>
+        <script>
+            //在当前页面加载时，写入一个html代码，使得当前页面出现一个按钮,点击按钮后,跳转到百度链接
+            document.write("<input type='button' id='b1' value='按钮' onclick='change_window()'>");
+        </script>
+    </body>
+</html>

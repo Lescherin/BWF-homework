@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+        <style>
+/*
+    4种选择器存在优先级，
+    优先级从高到低为：
+    1.id属性值选择器：#id属性值
+    2.类选择器：.类名{属性值}
+    3.一般属性选择器：[属性名] =等于
+    4.标签名选择器：标签名{属性值}
+    #id属性值 > .类名{属性值} > [属性名] =等于 > 标签名
+
+*/            
+/*id属性值选择器*/
+#01{
+    background-color: pink;
+}
+/*一般属性选择器*/
+input[type="text"]{
+    background-color: gray;
+}
+/*类选择器*/
+.INP{
+    background-color: red;
+}
+/*标签名选择器*/
+input{
+    background-color: gold;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+        <input type="text" id="01" name="INP1" class="INP" 
+        placeholder="请输入用户名" value="AAA">
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!--
+   Css, Cascading style sheet,层叠样式表,用于定义html标签(web页面元素)的样式
+   css内容嵌入到html标签的style属性中,用于定义单个标签的样式
+   位置有3种:三种样式,根据位置不同,分类讨论
+      1. 内联样式: 内入到html标签的style属性中,用于定义单个标签的样式
+      2. 内部样式: 内入到html标签的head标签的style标签中,用于定义页面的所有标签的样式
+      3. 外部样式: 内入到外部的css文件中,用于定义页面的所有标签的样式
+    内部样式表和外部样式表,由于编写在具体标签外,所以语法中需要有定位html标签的内容,语法格式
+    样式表选择器 键值对{
+        样式属性: 样式值;
+        样式值;
+    } 
+    不要求换行,严格区分大小写字母
+    内部样式表以及外部样式表的注释: /* 样式表注释 */
+
+    内部样式表由于直接填写在具体标签style属性中,所以不需要标签定位:样式属性键值对;
+    外部样式表由于编写在外部文件中,所以需要标签定位:选择器{样式属性键值对;}
+    属性值格式:
+     1.单个: 用于定义单个属性的值,格式: 属性名: 属性值;
+     2.结构体: 用于定义多个属性的值,格式: 属性名: 属性值 属性值;
+     3.范围: 用于定义范围属性的值,格式: 属性名: 属性值1,属性值2,属性值3,属性值4,属性值5,属性值6;
+
+     font-size: 10px;
+     color: red;
+     background-color: "lightblue";
+     text-align: center;
+    
+
+    样式表选择器: 用于定位html标签的样式表
+    有3部分语法,分别实现不同功能的元素定位
+    1.一般选择器: 用于定位所有元素
+    2.派生选择器: 用于定位指定元素的子元素
+    3.伪类选择器: 用于定位指定元素的状态元素
+
+    Q:伪类是什么?
+    A:伪类是 CSS 中用于 选择处于特定状态的元素 的一种选择器  
+    用于定位指定元素的状态元素,语法格式: 元素选择器:状态元素
+    例如: a:hover, a:visited, a:active, a:focus, a:link, a:target, a:has, a:is, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where, a:where,-->
+
+<html>
+    <head>
+        <title>样式表三种样式用法</title>
+        <!-- 外部样式表,链接引用了外部文件css01.css -->
+        <link rel="stylesheet" href="css01.css">
+        <!-- 内部样式表 标签style,定义了页面的所有标签的样式 -->
+        <style>         /* 内部样式表 */
+            body{
+                background-color: "lightblue";
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 内部样式表,定义了div标签的样式  -->
+        <div id="a1">hello world,css3</div>
+        <!-- 内联样式,定义了h2标签的样式  -->
+        <h2 style="color: red;">Css3.0 内联样式</h2>   
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>文档框内容切换</title>
+        <meta charset="utf-8">
+        <style>
+            .a1{
+                width: 100px;
+                height: 30px;
+            }
+        </style>
+        <script>
+           /*使得每点击一次文本框内容就从“正面”变“反面”，再点一次就“反面”变“正面”，可反复点击*/
+        function change(){
+            var flag=document.getElementById("v1").value;
+            if(flag=='正面'){   
+               flag='反面';
+            }
+            else{
+                flag='正面';
+            }
+            document.getElementById("v1").value=flag;      // 写回文本框内容
+            //为什么写会:因为`flag` 只是变量的 值 ，不是文本框 本身 。改动`flag` 只发生在 JS 内存里， 页面上的文本框并不知道 。
+           }        
+        </script>
+    </head>
+    <body>
+        <input id="v1" class="a1 a2 a3" value="正面">       
+        <button ondblclick="javascript:change();">点我</button>
+    </body>
+</html>
+        

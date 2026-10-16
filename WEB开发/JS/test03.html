@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+    <script>
+//浏览器未javascript内置很多对象函数,用于处理用户交互、操作DOM树等 自上而下执行
+//document对象 ,document,文件 表示当前web页面
+//document对象常用方法:
+//1. document.write()方法 用于向浏览器中输出内容
+//2. document.getElementById()方法  用于根据元素id获取元素对象
+//3. document.querySelector()方法   用于根据选择器获取元素对象
+//4. document.querySelectorAll()方法   用于根据选择器获取元素对象集合
+
+//自定义函数
+// function 函数名(参数名){
+//     函数内需要执行的js代码块
+// }
+
+a = Number(prompt("请输入第一个数字") );
+b = Number(prompt("请输入第二个数字") );
+//调用函数 这里的参数为实参,用于调用函数时传递的参数值
+alert('a和b的和为: '+plus(a,b));
+
+
+// 函数的参数为形参,用于函数定义时接收外部传递的参数值
+function plus(a1,b1){
+    return a1+b1;
+}
+
+//alert()弹出括号内的内容
+//document.getElementById("a1").value获取id为a1的元素 输入框的值
+//document.getElementsByName("PP")[0] 返回的是一个数组对象 (包含所有name为PP的元素对象需要通过索引来获取)
+function change(){
+    alert(document.getElementById("a1").value);
+    alert(document.getElementsByName("PP")[0].name); 
+
+    alert(document.getElementsByName("PP")[1].value);
+    alert(document.getElementById("b1").name);
+
+    alert(document.getElementsByClassName("INP")[0].className);
+}
+
+
+// function是关键字,表示后续定义的是函数 函数名是函数的标识符,用于调用函数
+// 参数名是用于函数调用时传递的参数值,使得函数可以接收外部传递的值,并根据值进行操作,从而执行出函数的功能
+// 函数内需要执行的js代码块是函数的主体,用于实现函数的功能
+// 函数可以有多个参数,也可以没有参数,参数之间用逗号隔开
+// 函数可以有多个返回值,也可以没有返回值 
+// return语句用于返回函数的执行结果 
+// 不需要返回值,函数会自动返回undefined值
+// 函数调用: 函数名(参数值)
+    </script>  
+    </head>
+    <body>
+        <input type="text" id="a1" class="INP" name="PP">
+        <input type="text" id="b1" class="INP" name="PP">
+        <input type="button" onclick="change()" value="获取输入值"></input>
+    </body>
+</html>

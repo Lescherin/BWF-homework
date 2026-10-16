@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>测试页面</title>
+        <meta charset="utf-8">
+    <script>
+    //定位到web页面的元素对象,属性名,表示该标签对象的该属性值,
+    //这个属性值可以是可读也可以是可写,根据属性名的不同,有不同的作用
+    
+    Txt=1; //类似一个flag,用于切换图片的显示
+    function double_text(){
+        Txt=document.getElementById("a1").value;
+        document.getElementById("a1").value=Txt+Txt;
+
+        if(Txt==1){
+            Txt=0;
+            document.getElementById("i1").src="../Asset/Laoda_zhouji.webp";
+        }else{
+            Txt=1;
+            document.getElementById("i1").src="../Asset/Laoda.webp";
+        }
+    }
+
+
+
+
+    </script>  
+    </head>
+    <body>
+        <div id="d1">
+            <input type="text" id="a1">
+            <input type="button" id="b2" value="双倍" onclick="double_text();">
+        </div>
+        <div id="d2">
+            <img id="i1" src="../Asset/Laoda.webp" onclick="switchImg();" style="cursor:pointer;"
+        </div>
+    </body>
+</html>
