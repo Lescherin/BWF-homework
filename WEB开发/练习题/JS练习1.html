@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS练习</title>
+        <meta charset="utf-8">
+        <script>
+            /*
+            有一个按钮，点击后执行javascript函数show_img()，无参数，
+            主要内容是：在按钮下方通过document.write()方法
+            出现1个可正常显示的自定义图片和一个可以链接到https://www.baidu.com的超链接。
+            使用document.write(); 方法作用是在当前文档中输出写入html代码，直接改写当前文档的内容
+            */
+           function show_img(){
+            /*
+            document.write() 在页面加载完成后调用时，会触发 document.open()，
+            清空当前整个文档（包括 <head> 里的 <style>），再重新写入内容。
+            所以原来的样式表规则已经不存在了，新写入的超链接没有任何样式。
+            解决：把伪类样式随新文档一起写入。
+             /* 
+             未访问时文字为蓝色，访问后文字黄色，鼠标覆盖该超链接时文字为20像素大小。
+            伪类选择器：:link, :visited, :hover, :active, :focus 
+            */
+            document.write("<style>#a1:link{color:blue;} #a1:visited{color:yellow;} #a1:hover{font-size:20px;}</style>");
+            document.write("<img src='../Asset/OIP.webp'>");
+            document.write("<a id='a1' href='https://www.baidu.com' target='_blank'>跳转百度</a>");
+           }
+        </script>
+        <style>
+           
+
+        </style>
+    </head>
+    <body>
+        <button id="b1" value="按钮" onclick="show_img()">show_img()函数测试</button>
+
+
+    </body>
+</html>

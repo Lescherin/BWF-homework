@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <!--1.title需要自行定义，文字编码是utf-8-->
+        <title> 登录页面 </title>
+        <meta charset="utf-8">
+
+        
+        
+        <style>
+            /*登录页面文字居中显示*/
+            body{
+                text-align: center;
+            }
+            /*input标签名选择器  文字大小20px*/
+            input{
+                font-size: 20px;
+            }   
+            /*div标签的文字显示红色*/
+            #divPWD{
+                color: red;
+            }
+
+            /*登录按钮居中显示*/
+            #button{
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            /*登录按钮绿色*/
+            #loginButton{
+                background-color: green;
+            }
+        </style>
+        <!--登录javascript函数do_login()，无参数，
+        主要内容是：弹出提示用户名中内容，然后判断密码是否空， 
+        读取用户名    getElementsByName("username")[0].value
+        读取密码      getElementsByName("password")[0].value
+        如果空则在div框中写入文字"密码不得为空"，非空则表单提交。
+        写入表单数据：
+            document.loginForm.submit();
+        div框中写入文字"密码不得为空":
+            document.getElementById("divPWD").innerHTML="密码不得为空";
+        --> 
+        <script>
+            function do_login(){
+                var username = document.getElementsByName("username")[0].value;
+                alert("用户名："+username);
+                var password = document.getElementsByName("password")[0].value;
+                if(password==""){
+                    document.getElementById("divPWD").innerHTML="密码不得为空";
+                }
+                else{
+                    document.loginForm.submit();
+                }
+            
+            }
+        </script>
+    </head>
+
+    <body>
+        <!--3.登录表单采用post请求，作用是将用户名、密码文本框中输入的内容、登录方式下拉列表和是否匿名的选项提交到userlogin.html页面-->  
+        <!--登录表单 表单名loginForm-->
+        <form name="loginForm" action="userlogin.html" method="post">
+        <!--用户名文本框-->
+        <label>
+            用户名：
+            <input type="text" name="username" value="admin" placeholder="请输入用户名">
+        </label>
+        <br>
+        <!--密码文本框-->
+        <label>
+            密&nbsp;&nbsp;&nbsp;&nbsp;码：
+            <input type="password" name="password" value="password112233" placeholder="请输入密码">
+            <!--表单内密码文本框后有div元素，无name有id属性，红色样式见 #divPWD-->
+            <div id="divPWD"></div>
+        </label>
+        <br>
+        <!--登录方式下拉列表(有总公司和分公司2个选项，选项标签有value属性，属性值分别是super和branch)-->
+        <label>
+            登录方式：
+            <select name="loginType">
+                <option value="super">总公司</option>
+                <option value="branch">分公司</option>
+            </select>
+        </label>
+        <br>
+        <!--匿名登录复选框(默认不选中匿名选项)-->
+        <label>
+            是否匿名登录：
+            <input type="checkbox" name="isAnonymous" value="true" >匿名登录
+            <input type="checkbox" name="isAnonymous" value="false" checked>非匿名登录
+        </label>
+        <br>
+        <!--登录按钮-->
+        <label>
+            <!--登录成功后提交到表单userlogin.html页面-->
+            <!--登录按钮点击事件调用登录javascript函数do_login()-->
+            <button id="loginButton" type="button" value="登录_login() " onclick="do_login()">登录</button>
+            &nbsp;
+            <button id="resetButton" type="reset" value="重置" onclick="alert('重置成功')">重置</button>
+        </label>
+        <br>
+        </form>
+    </body>
+</html>
